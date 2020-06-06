@@ -390,6 +390,19 @@ startSubroutine: s32'RoundInit'
         Unknown1533:
         Unknown1536:
         endMoveRegister:
+    addMove: s32'UpCoin'
+        moveType: (SPECIAL)
+        characterState: (STANDING)
+        moveInput: (INPUT_214)
+        moveInput: (INPUT_PRESS_H)
+        addMoveFlag: 72
+        Unknown1511: 110
+        Unknown1550:
+        Unknown1532:
+        Unknown1531:
+        Unknown1533:
+        Unknown1536:
+        endMoveRegister:
     addMove: s32'BucchusSigh'
         moveType: (SPECIAL)
         characterState: (STANDING)
@@ -586,6 +599,84 @@ startSubroutine: s32'RoundInit'
         moveInput: (INPUT_PRESS_H)
         isFollowupMove: 1
         endMoveRegister:
+    addMove: s32'FB_Killerjoker'
+        moveType: (SPECIAL)
+        addMoveFlag: (REQUIRES_25_TENSION)
+        characterState: (JUMPING)
+        moveInput: (INPUT_623)
+        moveInput: (INPUT_PRESS_D)
+        Unknown1498: -377, -278, 319, 375
+        Unknown1532:
+        Unknown1538:
+        Unknown1546:
+        Unknown1534:
+        endMoveRegister:
+    addMove: s32'XXMistFinerA'
+        moveType: (SPECIAL)
+        characterState: (STANDING)
+        moveInput: (INPUT_236)
+        moveInput: (INPUT_PRESS_P)
+        Unknown1498: -629, -740, 571, 385
+        Unknown1532:
+        Unknown1547:
+        Unknown1533:
+        Unknown1541:
+        Unknown1544:
+        endMoveRegister:
+    addMove: s32'XXMistFinerB'
+        moveType: (SPECIAL)
+        characterState: (STANDING)
+        moveInput: (INPUT_236)
+        moveInput: (INPUT_PRESS_K)
+        Unknown1498: -672, -426, 624, 244
+        Unknown1532:
+        Unknown1533:
+        Unknown1536:
+        endMoveRegister: 
+    addMove: s32'XXMistFinerC'
+        moveType: (SPECIAL)
+        characterState: (STANDING)
+        moveInput: (INPUT_236)
+        moveInput: (INPUT_PRESS_S)
+        Unknown1498: -592, -157, 495, 174
+        Unknown1532:
+        Unknown1546:
+        Unknown1539:
+        Unknown1533:
+        Unknown1556:
+        endMoveRegister:
+    addMove: s32'XXMistFinerFWalk'
+        moveType: (DUST_FOLLOWUP)
+        characterState: (STANDING)
+        moveInput: (INPUT_ANY_FORWARD)
+        isFollowupMove: 1
+        endMoveRegister:
+    addMove: s32'XXMistFinerBWalk'
+        moveType: (DUST_FOLLOWUP)
+        characterState: (STANDING)
+        moveInput: 95
+        isFollowupMove: 1
+        endMoveRegister:
+    addMove: s32'XXMistFinerFDash'
+        moveType: (DUST_FOLLOWUP)
+        characterState: (STANDING)
+        moveInput: 217
+        isFollowupMove: 1
+        Unknown1535:
+        endMoveRegister:
+    addMove: s32'XXMistFinerBDash'
+        moveType: (DUST_FOLLOWUP)
+        characterState: (STANDING)
+        moveInput: 218
+        isFollowupMove: 1
+        Unknown1534:
+        endMoveRegister:
+    addMove: s32'XXMistFinerCancel'
+        moveType: 19
+        characterState: (STANDING)
+        moveInput: (INPUT_PRESS_H)
+        isFollowupMove: 1
+        endMoveRegister:
     addMove: s32'Orenona'
         moveType: (OVERDRIVE)
         characterState: (STANDING)
@@ -618,6 +709,19 @@ startSubroutine: s32'RoundInit'
         Unknown1544:
         Unknown1543:
         Unknown1541:
+        endMoveRegister:
+    addMove: s32'FB_Jackhound'
+        moveType: (SPECIAL)
+        characterState: (STANDING)
+        addMoveFlag: (REQUIRES_25_TENSION)
+        moveInput: (INPUT_236)
+        moveInput: (INPUT_PRESS_D)
+        Unknown1511: 80
+        Unknown1498: -915, -367, 901, 292
+        Unknown1532:
+        Unknown1536:
+        Unknown1544:
+        Unknown1556:
         endMoveRegister:
     addMove: s32'TreasureHunt'
         moveType: (OVERDRIVE)
@@ -925,20 +1029,23 @@ startSubroutine: s32'RoundInit'
     registerFunc: s32'CmnFAirJump'
     registerFunc: s32'GlitterIsGold'
     registerFunc: s32'BucchusSigh'
-    registerFunc: s32'MistFinerCancel'
-    registerFunc: s32'MistFinerC'
-    registerFunc: s32'MistFinerB'
-    registerFunc: s32'MistFinerA'
-    registerFunc: s32'MistFinerFWalk'
-    registerFunc: s32'MistFinerBWalk'
-    registerFunc: s32'MistFinerFDash'
-    registerFunc: s32'MistFinerBDash'
     registerFunc: s32'AirMistFinerCancel'
     registerFunc: s32'AirMistFinerC'
     registerFunc: s32'AirMistFinerB'
     registerFunc: s32'AirMistFinerA'
     registerFunc: s32'MistFinerFDashAir'
     registerFunc: s32'MistFinerBDashAir'
+    registerFunc: s32'XXMistFinerCancel'
+    registerFunc: s32'XXMistFinerC'
+    registerFunc: s32'XXMistFinerB'
+    registerFunc: s32'XXMistFinerA'
+    registerFunc: s32'XXMistFinerFWalk'
+    registerFunc: s32'XXMistFinerBWalk'
+    registerFunc: s32'XXMistFinerFDash'
+    registerFunc: s32'XXMistFinerBDash'
+    registerFunc: s32'UpCoin'
+    registerFunc: s32'FB_Jackhound'
+    registerFunc: s32'FB_Killerjoker'
     registerFunc: s32'Sinwaza'
     registerFunc: s32'Sinwaza_Shot'
     registerFunc: s32'Sinwaza_Air'
@@ -3007,7 +3114,7 @@ startState: s32'NmlAtk6B'
         endUpon:
     sprite: s32'jhn211_00', 3
     physicsXImpulse: 45500
-    specialCancelEnabled: 0
+    specialCancelEnabled: 1
     sprite: s32'jhn211_01', 3
     playVoice: s16'vxxx201'
     sprite: s32'jhn211_02', 3
@@ -4384,6 +4491,42 @@ startState: s32'GlitterIsGold'
     sprite: s32'jhn413_06', 2
     endState:
 
+startState: s32'UpCoin'
+    upon: (IMMEDIATE)
+        if: (NEXT_ARG_IS_VAR), 3
+            Unknown54: 0, 2, 3, 0, -1
+            callSubroutine: s32'Acv_TreasureHunt', 0, 0, 0, 0, 0, 0, 0, 0
+            storeValue: (NEXT_ARG_IS_VAR), 45, 0, 1
+            endIf:
+        Unknown59: s32'TRP_JHN0', 2, 157
+        if: (NEXT_ARG_IS_VAR), 157
+            ifOperation: (IS_GREATER), (NEXT_ARG_IS_VAR), 25, 0, 8
+                Unknown54: 0, 2, 25, 0, -1
+                endIf:
+            endIf:
+        else:
+            Unknown54: 0, 2, 25, 0, -1
+            endElse:
+        tensionGainOnConnect: 0
+        yrcWindowLength: 12
+        endUpon:
+    sprite: s32'jhn413_00', 1
+    tensionGain: 15
+    sprite: s32'jhn413_01', 3
+    playVoice: s16'vxxx207'
+    sprite: s32'jhn413_02', 1
+    sprite: s32'jhn413_03', 4
+    playCharacterSFX: s32'6'
+    Unknown2161: 100, 150000, 290000
+    Unknown2247: 2, 45, 0, 0
+    callEtcState: s32'FlyingCoin', 130
+    playSFX: s32'SE_SWINGA'
+    sprite: s32'jhn413_04', 4
+    recoveryState:
+    sprite: s32'jhn413_05', 2
+    sprite: s32'jhn413_06', 2
+    endState:
+
 startState: s32'DivineBladeLand'
     upon: (IMMEDIATE)
         addWhiffCancelOption: s32'DivineBladeLandShot'
@@ -4609,6 +4752,7 @@ startState: s32'Sinwaza'
 
 startState: s32'Sinwaza_Shot'
     upon: (IMMEDIATE)
+        disableHitstop: 1
         tensionGainOnConnect: 30
         damage: 35
         groundHitEffect: 12
@@ -4618,6 +4762,7 @@ startState: s32'Sinwaza_Shot'
         hitPushbackX: 0
         hitAirPushbackX: 18000
         hitAirPushbackY: 25000
+        setForcedProration: 95
         Unknown2159: 1
         Unknown2137: 0
         Unknown2136: 0
@@ -4672,6 +4817,7 @@ startState: s32'Sinwaza_Shot'
     playSFX: s32'GG2_018'
     Unknown2161: 100, 120000, 0
     createObject2: s32'Sinwaza_Shot2', 130
+    frcWindow: 7
     sprite: s32'jhn416_07', 2
     Unknown114:
     Unknown111: 50
@@ -4749,12 +4895,13 @@ startState: s32'Sinwaza_Air'
     Unknown2161: 100, 40000, 0
     createObject2: s32'Sinwaza_Shot2_Air', 130
     playSFX: s32'GG2_018'
-    sprite: s32'jhn416_07', 2
-    sprite: s32'jhn416_08', 2
     Unknown116: 20
     addVelocityY: 21000
     setGravity: 1925
     physicsXImpulse: -1750
+    frcWindow: 8
+    sprite: s32'jhn416_07', 2
+    sprite: s32'jhn416_08', 2
     sprite: s32'jhn416_09', 3
     setGravity: 2000
     Unknown2137: 1
@@ -4867,7 +5014,7 @@ startSubroutine: s32'AtkMistGahuCheck'
             endIf:
         Unknown2001: 23, s32'MistFinerALv2'
         if: (NEXT_ARG_IS_VAR), 0
-            staggerDuration: 72
+            staggerDuration: 100
             endIf:
         Unknown2001: 23, s32'MistFinerBLv0'
         if: (NEXT_ARG_IS_VAR), 0
@@ -4879,7 +5026,7 @@ startSubroutine: s32'AtkMistGahuCheck'
             endIf:
         Unknown2001: 23, s32'MistFinerBLv2'
         if: (NEXT_ARG_IS_VAR), 0
-            staggerDuration: 76
+            staggerDuration: 100
             endIf:
         Unknown2001: 23, s32'MistFinerCLv0'
         if: (NEXT_ARG_IS_VAR), 0
@@ -4891,7 +5038,7 @@ startSubroutine: s32'AtkMistGahuCheck'
             endIf:
         Unknown2001: 23, s32'MistFinerCLv2'
         if: (NEXT_ARG_IS_VAR), 0
-            staggerDuration: 68
+            staggerDuration: 100
             endIf:
         endIf:
     else:
@@ -7267,6 +7414,8 @@ startState: s32'BucchusSigh'
     sprite: s32'jhn414_06', 4
     playSFX: s32'SE_JUMPDROP'
     createObject2: s32'Mist', 130
+    playSFX: s32'SE_SAYA'
+    frcWindow: 6
     sprite: s32'jhn414_04', 4
     sprite: s32'jhn414_05', 4
     sprite: s32'jhn414_06', 4
@@ -7275,9 +7424,8 @@ startState: s32'BucchusSigh'
     sprite: s32'jhn414_06', 4
     sprite: s32'jhn414_04', 2
     recoveryState:
-    sprite: s32'jhn414_07', 2
-    sprite: s32'jhn414_08', 3
-    playSFX: s32'SE_SAYA'
+    sprite: s32'jhn414_07', 1
+    sprite: s32'jhn414_08', 1
     sprite: s32'jhn414_09', 1
     sprite: s32'jhn414_10', 1
     sprite: s32'jhn414_11', 1
@@ -8582,4 +8730,1357 @@ startState: s32'EventLEO08B_03'
     sprite: s32'jhn000_08', 7
     Unknown3:
     goToMarker: s32'loop'
+    endState:
+
+startSubroutine: s32'XXAtkMistGahuCheck'
+    if: (NEXT_ARG_IS_VAR), 5
+        Unknown1137: 128
+        setProration: 80
+        upon: 9
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            upon: 61
+                createObject2: s32'Mist_Anti_FD', 100
+                endUpon:
+            endUpon:
+        Unknown53: 23, 2, 50, 22, 2, 18
+        ifOperation: (IS_GREATER_OR_EQUAL), (NEXT_ARG_IS_VAR), 50, 0, 1
+            guardType: (NONE)
+            endIf:
+        else:
+            if: (NEXT_ARG_IS_VAR), 45
+                guardType: (LOW)
+                endIf:
+            else:
+                guardType: (ANY)
+                endElse:
+            Unknown1167: 1
+            hitPushbackX: 0
+            endElse:
+        Unknown2001: 23, s32'XXMistFinerALv0'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 54
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerALv1'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 76
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerALv2'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 72
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerBLv0'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 70
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerBLv1'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 68
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerBLv2'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 76
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerCLv0'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 74
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerCLv1'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 66
+            endIf:
+        Unknown2001: 23, s32'XXMistFinerCLv2'
+        if: (NEXT_ARG_IS_VAR), 0
+            staggerDuration: 68
+            endIf:
+        endIf:
+    else:
+        if: (NEXT_ARG_IS_VAR), 45
+            guardType: (LOW)
+            endIf:
+        else:
+            guardType: (ANY)
+            endElse:
+        endElse:
+    Unknown2202: 1
+    endSubroutine:
+
+startState: s32'XXMistFinerA'
+    upon: (IMMEDIATE)
+        storeValue: (NEXT_ARG_IS_VAR), 53, 0, 0
+        endUpon:
+    sprite: s32'jhn400_00', 1
+    tensionGain: 0
+    tensionGainOnConnect: 0
+    playSFX: s32'SE_SWINGD'
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'XXMistFinerDehajime'
+    endState:
+
+startState: s32'XXMistFinerB'
+    upon: (IMMEDIATE)
+        storeValue: (NEXT_ARG_IS_VAR), 53, 0, 1
+        endUpon:
+    sprite: s32'jhn400_00', 1
+    tensionGain: 0
+    tensionGainOnConnect: 0
+    playSFX: s32'SE_SWINGD'
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'XXMistFinerDehajime'
+    endState:
+
+startState: s32'XXMistFinerC'
+    upon: (IMMEDIATE)
+        storeValue: (NEXT_ARG_IS_VAR), 53, 0, 2
+        endUpon:
+    sprite: s32'jhn400_00', 1
+    tensionGain: 0
+    tensionGainOnConnect: 0
+    playSFX: s32'SE_SWINGD'
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'XXMistFinerDehajime'
+    endState:
+
+startState: s32'XXMistFinerDehajime'
+    upon: (IMMEDIATE)
+        storeValue: (NEXT_ARG_IS_VAR), 54, 0, 0
+        Unknown708: '0x1200000001000000'
+        upon: (FRAME_STEP)
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                ifOperation: (IS_GREATER_OR_EQUAL), (NEXT_ARG_IS_VAR), 13, 0, 8
+                    Unknown27: s32'XXMistFinerLoop'
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                ifOperation: (IS_GREATER_OR_EQUAL), (NEXT_ARG_IS_VAR), 13, 0, 5
+                    Unknown27: s32'XXMistFinerLoop'
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                ifOperation: (IS_GREATER_OR_EQUAL), (NEXT_ARG_IS_VAR), 13, 0, 3
+                    Unknown27: s32'XXMistFinerLoop'
+                    endIf:
+                endIf:
+            callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+            endUpon:
+        endUpon:
+    sprite: s32'jhn400_00', 1
+    Unknown448: s32'jhn_mistkamae_kidou', 100
+    sprite: s32'jhn400_01', 2
+    sprite: s32'jhn400_02', 2
+    sprite: s32'jhn400_03', 2
+    sprite: s32'jhn400_04', 6
+    sprite: s32'jhn400_05', 6
+    sprite: s32'jhn400_06', 6
+    Unknown3:
+    endState:
+
+startState: s32'XXMistFinerLoop'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        ifNot: 2, 54
+            whiffCancelOptionBufferTime: s32'XXMistFinerFDash', 6
+            whiffCancelOptionBufferTime: s32'XXMistFinerBDash', 6
+            whiffCancelOptionBufferTime: s32'XXMistFinerCancel', 6
+            addWhiffCancelOption: s32'XXMistFinerFWalk'
+            addWhiffCancelOption: s32'XXMistFinerBWalk'
+            addWhiffCancelOption: s32'XXMistFinerFDash'
+            addWhiffCancelOption: s32'XXMistFinerBDash'
+            addWhiffCancelOption: s32'XXMistFinerCancel'
+            Unknown1616: 1
+            endIf:
+        else:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                    Unknown27: s32'XXMistFinerALv0'
+                    endIf:
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                    Unknown27: s32'XXMistFinerALv1'
+                    endIf:
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                    Unknown27: s32'XXMistFinerALv2'
+                    endIf:
+                callCmnEfFunc: s32'MistFinerLevelYoin'
+                storeValue: (NEXT_ARG_IS_VAR), 4, 0, 0
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                    Unknown27: s32'XXMistFinerBLv0'
+                    endIf:
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                    Unknown27: s32'XXMistFinerBLv1'
+                    endIf:
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                    Unknown27: s32'XXMistFinerBLv2'
+                    endIf:
+                callCmnEfFunc: s32'MistFinerLevelYoin'
+                storeValue: (NEXT_ARG_IS_VAR), 4, 0, 0
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                    Unknown27: s32'XXMistFinerCLv0'
+                    endIf:
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                    Unknown27: s32'XXMistFinerCLv1'
+                    endIf:
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                    Unknown27: s32'XXMistFinerCLv2'
+                    endIf:
+                callCmnEfFunc: s32'MistFinerLevelYoin'
+                storeValue: (NEXT_ARG_IS_VAR), 4, 0, 0
+                endIf:
+            endElse:
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+            Unknown2161: 100, -115000, 245000
+            Unknown448: s32'jhn_misthatudo_lv2', 130
+            endIf:
+        Unknown176: 0
+        upon: (FRAME_STEP)
+            ifOperation: (IS_GREATER_OR_EQUAL), (NEXT_ARG_IS_VAR), 13, 0, 2
+                ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+                    checkInput: 1
+                    ifNot: 2, 0
+                        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                        Unknown27: s32'XXMistFinerALv0'
+                        endIf:
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                        Unknown27: s32'XXMistFinerALv1'
+                        endIf:
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                        Unknown27: s32'XXMistFinerALv2'
+                        endIf:
+                    callCmnEfFunc: s32'MistFinerLevelYoin'
+                    storeValue: (NEXT_ARG_IS_VAR), 4, 0, 0
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+                checkInput: 10
+                ifNot: 2, 0
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                        Unknown27: s32'XXMistFinerBLv0'
+                        endIf:
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                        Unknown27: s32'XXMistFinerBLv1'
+                        endIf:
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                        Unknown27: s32'XXMistFinerBLv2'
+                        endIf:
+                    callCmnEfFunc: s32'MistFinerLevelYoin'
+                    storeValue: (NEXT_ARG_IS_VAR), 4, 0, 0
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+                checkInput: 19
+                ifNot: 2, 0
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 0
+                        Unknown27: s32'XXMistFinerCLv0'
+                        endIf:
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 1
+                        Unknown27: s32'XXMistFinerCLv1'
+                        endIf:
+                    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+                        Unknown27: s32'XXMistFinerCLv2'
+                        endIf:
+                    callCmnEfFunc: s32'MistFinerLevelYoin'
+                    storeValue: (NEXT_ARG_IS_VAR), 4, 0, 0
+                    endIf:
+                endIf:
+            endIf:
+        callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+        endUpon:
+    endUpon:
+
+setMarker: s32'loop'
+sprite: s32'jhn400_07', 6
+ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 4, 0, 2
+    Unknown2161: 100, -125000, 295000
+    Unknown448: s32'jhn_misthatudo_lv3', 130
+    endIf:
+
+sprite: s32'jhn400_08', 6
+sprite: s32'jhn400_09', 6
+sprite: s32'jhn400_10', 6
+sprite: s32'jhn400_11', 6
+sprite: s32'jhn400_12', 6
+sprite: s32'jhn400_13', 6
+sprite: s32'jhn400_14', 6
+sprite: s32'jhn400_15', 6
+Unknown3:
+goToMarker: s32'loop'
+endState:
+startState: s32'XXMistFinerFWalk'
+    upon: (IMMEDIATE)
+        recoveryState:
+        upon: (FRAME_STEP)
+            checkInput: 121
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+                checkInput: 1
+                ifNot: 2, 0
+                    Unknown27: s32'XXMistFinerLoop'
+                    storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+                checkInput: 10
+                ifNot: 2, 0
+                    Unknown27: s32'XXMistFinerLoop'
+                    storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+                checkInput: 19
+                ifNot: 2, 0
+                    Unknown27: s32'XXMistFinerLoop'
+                    storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                    endIf:
+                endIf:
+            callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+            endUpon:
+        addWhiffCancelOption: s32'XXMistFinerCancel'
+        addWhiffCancelOption: s32'TreasureHunt'
+        Unknown1618: 1
+        endUpon:
+    setMarker: s32'loop'
+    sprite: s32'jhn406_00', 8
+    physicsXImpulse: 1925
+    sprite: s32'jhn406_01', 8
+    sprite: s32'jhn406_02', 8
+    sprite: s32'jhn406_03', 8
+    Unknown2145: 0, 100
+    sprite: s32'jhn406_04', 8
+    sprite: s32'jhn406_05', 8
+    Unknown3:
+    goToMarker: s32'loop'
+    endState:
+
+startState: s32'XXMistFinerBWalk'
+    upon: (IMMEDIATE)
+        recoveryState:
+        upon: (FRAME_STEP)
+            checkInput: 95
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+                checkInput: 1
+                ifNot: 2, 0
+                    Unknown27: s32'XXMistFinerLoop'
+                    storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+                checkInput: 10
+                ifNot: 2, 0
+                    Unknown27: s32'XXMistFinerLoop'
+                    storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                    endIf:
+                endIf:
+            ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+                checkInput: 19
+                ifNot: 2, 0
+                    Unknown27: s32'XXMistFinerLoop'
+                    storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                    endIf:
+                endIf:
+            callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+            endUpon:
+        addWhiffCancelOption: s32'XXMistFinerCancel'
+        addWhiffCancelOption: s32'TreasureHunt'
+        Unknown1618: 1
+        endUpon:
+    setMarker: s32'loop'
+    sprite: s32'jhn407_00', 8
+    tensionGain: 0
+    tensionGainOnConnect: 0
+    physicsXImpulse: -1750
+    sprite: s32'jhn407_01', 8
+    sprite: s32'jhn407_02', 8
+    sprite: s32'jhn407_03', 8
+    Unknown2145: 0, 100
+    sprite: s32'jhn407_04', 8
+    sprite: s32'jhn407_05', 8
+    Unknown3:
+    goToMarker: s32'loop'
+    endState:
+
+startState: s32'XXMistFinerFDash'
+    upon: (IMMEDIATE)
+        recoveryState:
+        addWhiffCancelOption: s32'StepTreasureHunt'
+        Unknown1618: 1
+        upon: (FRAME_STEP)
+            callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+            endUpon:
+        endUpon:
+    sprite: s32'jhn400_10', 2
+    Unknown448: s32'jhn_mist_dash', 100
+    playSFX: s32'GG2_072'
+    playVoice: s16'vxxx204'
+    sprite: s32'jhn400_10', 1
+    tensionGain: 0
+    tensionGainOnConnect: 0
+    physicsXImpulse: 3500
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: -7000
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: 10500
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: -14000
+    sprite: s32'jhn400_10', 3
+    Unknown338: 0
+    physicsXImpulse: 61250
+    sprite: s32'jhn400_10', 1
+    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+        checkInput: 1
+        ifNot: 2, 0
+            Unknown338: 255
+            momentumPush: 60000
+            Unknown27: s32'XXMistFinerLoop'
+            storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+            endIf:
+        endIf:
+    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+        checkInput: 10
+        ifNot: 2, 0
+            Unknown338: 255
+            momentumPush: 60000
+            Unknown27: s32'XXMistFinerLoop'
+            storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+            endIf:
+        endIf:
+    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+        checkInput: 19
+        ifNot: 2, 0
+            Unknown338: 255
+            momentumPush: 60000
+            Unknown27: s32'XXMistFinerLoop'
+            storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+            endIf:
+        endIf:
+    sprite: s32'jhn400_10', 1
+    Unknown448: s32'jhn_mist_dash_yoin', 100
+    Unknown338: 255
+    physicsXImpulse: 14000
+    upon: (FRAME_STEP)
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+            checkInput: 1
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                endIf:
+            endIf:
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+            checkInput: 10
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                endIf:
+            endIf:
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+            checkInput: 19
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                endIf:
+            endIf:
+        callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+        endUpon:
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: -10500
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: 7000
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: -7000
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'XXMistFinerLoop'
+    endState:
+
+startState: s32'XXMistFinerBDash'
+    upon: (IMMEDIATE)
+        recoveryState:
+        addWhiffCancelOption: s32'StepTreasureHunt'
+        Unknown1618: 1
+        upon: (FRAME_STEP)
+            callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+            endUpon:
+        endUpon:
+    sprite: s32'jhn400_10', 2
+    Unknown448: s32'jhn_mist_backstep', 100
+    playSFX: s32'GG2_072'
+    playVoice: s16'vxxx204'
+    sprite: s32'jhn400_10', 1
+    tensionGain: 0
+    tensionGainOnConnect: 0
+    physicsXImpulse: -3500
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: 7000
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: -10500
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: 14000
+    sprite: s32'jhn400_00', 3
+    Unknown338: 0
+    physicsXImpulse: -61250
+    sprite: s32'jhn400_00', 1
+    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+        checkInput: 1
+        ifNot: 2, 0
+            Unknown338: 255
+            momentumPush: -30000
+            Unknown27: s32'XXMistFinerLoop'
+            storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+            endIf:
+        endIf:
+    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+        checkInput: 10
+        ifNot: 2, 0
+            Unknown338: 255
+            momentumPush: -30000
+            Unknown27: s32'XXMistFinerLoop'
+            storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+            endIf:
+        endIf:
+    ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+        checkInput: 19
+        ifNot: 2, 0
+            Unknown338: 255
+            momentumPush: -30000
+            Unknown27: s32'XXMistFinerLoop'
+            storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+            endIf:
+        endIf:
+    sprite: s32'jhn400_10', 1
+    Unknown448: s32'jhn_mist_backstep_yoin', 100
+    Unknown338: 255
+    physicsXImpulse: -14000
+    upon: (FRAME_STEP)
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 0
+            checkInput: 1
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                endIf:
+            endIf:
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 1
+            checkInput: 10
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                endIf:
+            endIf:
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 53, 0, 2
+            checkInput: 19
+            ifNot: 2, 0
+                Unknown27: s32'XXMistFinerLoop'
+                storeValue: (NEXT_ARG_IS_VAR), 54, 0, 1
+                endIf:
+            endIf:
+        callSubroutine: s32'jhn_DispMistFinerLevel', 0, 0, 0, 0, 0, 0, 0, 0
+        endUpon:
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: 14000
+    sprite: s32'jhn400_10', 1
+    physicsXImpulse: -7000
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'XXMistFinerLoop'
+    endState:
+
+startState: s32'XXMistFinerCancel'
+    upon: (IMMEDIATE)
+        recoveryState:
+        endUpon:
+    sprite: s32'jhn404_00', 2
+    sprite: s32'jhn404_01', 2
+    endState:
+
+startState: s32'XXMistFinerALv0'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        isAirUnblockable: 1
+        groundHitEffect: (AIR_FACE_UP)
+        disableHitstop: 1
+        Unknown725: 1
+        attackLevel: 3
+        damage: 30
+        setProration: 85
+        setForcedProration: 80
+        riscMinus: 12
+        tensionGainOnConnect: 40
+        hitAirPushbackX: 21250
+        hitAirPushbackY: 46000
+        untechableTime: 38
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 0
+        Unknown1873: 1
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_High'
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 50
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 10
+        endUpon:
+    sprite: s32'jhn401_00', 1
+    tensionGain: 20
+    playVoice: s16'vxxx201'
+    sprite: s32'jhn401_01', 1
+    sprite: s32'jhn401_02', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn401_03', 1
+    Unknown448: s32'jhn_401high1_twinkle', 100
+    createObject2: s32'401High_bake1', 100
+    grabOrRelease:
+    createObject2: s32'MistFinerALv0sousai', 100
+    sprite: s32'jhn401_04', 1
+    sprite: s32'jhn401_05', 1
+    sprite: s32'jhn401_06', 1
+    sprite: s32'jhn401_07', 1
+    recoveryState:
+    sprite: s32'jhn401_08', 1
+    Unknown448: s32'jhn_mist_lv1modori', 100
+    sprite: s32'jhn401_09', 1
+    createObject2: s32'401High_bake2', 100
+    sprite: s32'jhn401_10', 1
+    sprite: s32'jhn401_11', 1
+    sprite: s32'jhn401_12', 1
+    sprite: s32'jhn401_13', 1
+    sprite: s32'jhn401_14', 1
+    sprite: s32'jhn401_15', 1
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn401_16', 2
+    Unknown2161: 100, -125000, 295000
+    Unknown448: s32'jhn_noutou01', 130
+    sprite: s32'jhn401_17', 2
+    sprite: s32'jhn401_18', 2
+    sprite: s32'jhn401_19', 2
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerALv1'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        isAirUnblockable: 1
+        groundHitEffect: (AIR_FACE_UP)
+        disableHitstop: 1
+        riscMinus: 10
+        Unknown725: 1
+        attackLevel: 4
+        damage: 40
+        tensionGainOnConnect: 80
+        setProration: 85
+        hitAirPushbackX: 50000
+        hitAirPushbackY: 45000
+        untechableTime: 340
+        SFX_0: s32'SE_HITKIRIB'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 0
+        Unknown1873: 1
+        Unknown1045: 2, s32'MistHit_High'
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 85
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        Unknown287: 1
+        yrcWindowLength: 10
+        endUpon:
+    sprite: s32'jhn401_00', 1
+    playVoice: s16'vxxx201'
+    tensionGain: 30
+    sprite: s32'jhn401_01', 1
+    sprite: s32'jhn401_02', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn401_03', 1
+    Unknown448: s32'jhn_401high1_twinkle2', 100
+    createObject2: s32'401High_bake1', 100
+    grabOrRelease:
+    createObject2: s32'MistFinerALv0sousai', 100
+    sprite: s32'jhn401_04', 1
+    sprite: s32'jhn401_05', 1
+    sprite: s32'jhn401_06', 1
+    sprite: s32'jhn401_07', 1
+    sprite: s32'jhn401_08', 1
+    Unknown448: s32'jhn_mist_lv2modori', 100
+    sprite: s32'jhn401_09', 1
+    createObject2: s32'401High_bake2', 100
+    sprite: s32'jhn401_10', 1
+    recoveryState:
+    sprite: s32'jhn401_11', 1
+    sprite: s32'jhn401_12', 2
+    sprite: s32'jhn401_13', 3
+    sprite: s32'jhn401_14', 3
+    sprite: s32'jhn401_15', 3
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn401_16', 2
+    Unknown2161: 100, -125000, 295000
+    Unknown448: s32'jhn_noutou01', 130
+    sprite: s32'jhn401_17', 2
+    sprite: s32'jhn401_18', 3
+    sprite: s32'jhn401_19', 3
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerBLv0'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        groundHitEffect: (AIR_FACE_UP)
+        disableHitstop: 1
+        Unknown725: 1
+        attackLevel: 3
+        riscMinus: 6
+        damage: 32
+        tensionGainOnConnect: 40
+        setProration: 85
+        hitAirPushbackX: 17500
+        hitAirPushbackY: 28000
+        untechableTime: 25
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_Mid'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 0
+        Unknown1873: 1
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 50
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 12
+        endUpon:
+    sprite: s32'jhn402_00', 2
+    playVoice: s16'vxxx202'
+    tensionGain: 20
+    sprite: s32'jhn402_01', 2
+    sprite: s32'jhn402_02', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn402_03', 1
+    Unknown448: s32'jhn_402mid1_twinkle', 100
+    createObject2: s32'402Mid_bake1', 100
+    grabOrRelease:
+    createObject2: s32'MistFinerBLv0sousai', 100
+    sprite: s32'jhn402_04', 1
+    sprite: s32'jhn402_05', 1
+    sprite: s32'jhn402_06', 1
+    recoveryState:
+    sprite: s32'jhn402_07', 1
+    sprite: s32'jhn402_08', 1
+    Unknown448: s32'jhn_mist_lv1modori', 100
+    createObject2: s32'402Mid_bake2', 100
+    sprite: s32'jhn402_09', 2
+    sprite: s32'jhn402_10', 2
+    sprite: s32'jhn402_11', 2
+    sprite: s32'jhn402_12', 2
+    sprite: s32'jhn402_13', 1
+    sprite: s32'jhn402_14', 1
+    sprite: s32'jhn402_15', 3
+    Unknown2161: 100, -106000, 310000
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn402_16', 3
+    sprite: s32'jhn402_17', 3
+    sprite: s32'jhn402_18', 2
+    sprite: s32'jhn402_19', 2
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerBLv1'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        groundHitEffect: (AIR_FACE_UP)
+        disableHitstop: 1
+        riscMinus: 10
+        Unknown725: 1
+        attackLevel: 4
+        damage: 40
+        setProration: 85
+        hitAirPushbackX: 300
+        hitAirPushbackY: 47500
+        untechableTime: 90
+        Unknown906: 1
+        tensionGainOnConnect: 80
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_Mid'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 0
+        Unknown1873: 1
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 85
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 10
+        endUpon:
+    sprite: s32'jhn402_00', 1
+    playVoice: s16'vxxx202'
+    tensionGain: 30
+    sprite: s32'jhn402_01', 1
+    sprite: s32'jhn402_02', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn402_03', 1
+    createObject2: s32'402Mid_bake1', 100
+    Unknown448: s32'jhn_402mid1_twinkle2', 100
+    grabOrRelease:
+    createObject2: s32'MistFinerBLv0sousai', 100
+    sprite: s32'jhn402_04', 1
+    sprite: s32'jhn402_05', 1
+    sprite: s32'jhn402_06', 1
+    recoveryState:
+    sprite: s32'jhn402_07', 1
+    Unknown448: s32'jhn_mist_lv2modori', 100
+    sprite: s32'jhn402_08', 1
+    createObject2: s32'402Mid_bake2', 100
+    sprite: s32'jhn402_09', 1
+    sprite: s32'jhn402_10', 1
+    sprite: s32'jhn402_11', 1
+    sprite: s32'jhn402_12', 1
+    sprite: s32'jhn402_13', 1
+    sprite: s32'jhn402_14', 1
+    sprite: s32'jhn402_15', 2
+    Unknown2161: 100, -106000, 310000
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn402_16', 3
+    sprite: s32'jhn402_17', 3
+    sprite: s32'jhn402_18', 3
+    sprite: s32'jhn402_19', 3
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerBLv2'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        groundHitEffect: (AIR_FACE_UP)
+        disableHitstop: 1
+        riscMinus: 6
+        Unknown725: 1
+        attackLevel: 4
+        damage: 60
+        hitAirPushbackX: 22000
+        hitAirPushbackY: 25000
+        untechableTime: 90
+        tumbleDuration: 30
+        Unknown906: 1
+        wallBounceCount: 1
+        wallBounceInCornerOnly: 1
+        wallstickDuration: 80
+        tensionGainOnConnect: 90
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_Mid'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 0
+        Unknown1873: 1
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 95
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 10
+        endUpon:
+    sprite: s32'jhn402_00', 1
+    playVoice: s16'vxxx202'
+    tensionGain: 40
+    sprite: s32'jhn402_01', 1
+    sprite: s32'jhn402_02', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn402_03ex', 1
+    createObject2: s32'402Mid_bake1', 100
+    screenShake: 1, 3
+    grabOrRelease:
+    createObject2: s32'MistFinerBLv2sousai', 100
+    sprite: s32'jhn402_04ex', 1
+    createObject2: s32'402Mid_kira', 100
+    sprite: s32'jhn402_05ex', 1
+    sprite: s32'jhn402_06', 1
+    recoveryState:
+    sprite: s32'jhn402_07', 1
+    sprite: s32'jhn402_08', 1
+    createObject2: s32'402Mid_bake2', 100
+    Unknown448: s32'jhn_mist_lv3modori', 100
+    sprite: s32'jhn402_09', 1
+    sprite: s32'jhn402_10', 1
+    sprite: s32'jhn402_11', 1
+    sprite: s32'jhn402_12', 1
+    sprite: s32'jhn402_13', 1
+    sprite: s32'jhn402_14', 1
+    sprite: s32'jhn402_15', 2
+    Unknown2161: 100, -106000, 310000
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn402_16', 3
+    sprite: s32'jhn402_17', 3
+    sprite: s32'jhn402_18', 3
+    sprite: s32'jhn402_19', 3
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerCLv0'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        isAirUnblockable: 1
+        guardType: (LOW)
+        groundHitEffect: (AIR_FACE_DOWN)
+        disableHitstop: 1
+        Unknown725: 1
+        attackLevel: 3
+        damage: 29
+        tensionGainOnConnect: 40
+        setProration: 85
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_Low'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 1
+        Unknown1873: 1
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 50
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 17
+        endUpon:
+    sprite: s32'jhn403_00', 3
+    playVoice: s16'vxxx203'
+    tensionGain: 20
+    sprite: s32'jhn403_01', 2
+    sprite: s32'jhn403_02', 2
+    sprite: s32'jhn403_03', 2
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn403_04', 1
+    sprite: s32'jhn403_05', 1
+    createObject2: s32'403Low_bake1', 100
+    Unknown448: s32'jhn_403low1_twinkle', 100
+    grabOrRelease:
+    createObject2: s32'MistFinerCLv0sousai', 100
+    sprite: s32'jhn403_06', 1
+    sprite: s32'jhn403_07', 1
+    recoveryState:
+    sprite: s32'jhn403_08', 1
+    Unknown448: s32'jhn_mist_lv1modori', 100
+    sprite: s32'jhn403_09', 1
+    createObject2: s32'403Low_bake2', 100
+    sprite: s32'jhn403_10', 2
+    sprite: s32'jhn403_11', 2
+    sprite: s32'jhn403_12', 2
+    sprite: s32'jhn403_13', 1
+    sprite: s32'jhn403_14', 1
+    sprite: s32'jhn403_15', 1
+    sprite: s32'jhn403_16', 3
+    Unknown2161: 100, -106000, 320000
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn403_17', 3
+    sprite: s32'jhn403_18', 3
+    sprite: s32'jhn403_19', 4
+    sprite: s32'jhn403_20', 4
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerCLv1'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        isAirUnblockable: 1
+        guardType: (LOW)
+        groundHitEffect: (AIR_FACE_DOWN)
+        disableHitstop: 1
+        riscMinus: 10
+        Unknown725: 1
+        attackLevel: 4
+        damage: 40
+        tensionGainOnConnect: 80
+        setProration: 85
+        hitAirPushbackX: 500
+        hitAirPushbackY: 42000
+        untechableTime: 220
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_Low'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 1
+        Unknown1873: 1
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 85
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 11
+        endUpon:
+    sprite: s32'jhn403_01', 1
+    playVoice: s16'vxxx203'
+    tensionGain: 30
+    sprite: s32'jhn403_02', 1
+    sprite: s32'jhn403_03', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn403_04', 1
+    sprite: s32'jhn403_05', 1
+    createObject2: s32'403Low_bake1', 100
+    Unknown448: s32'jhn_403low1_twinkle2', 100
+    grabOrRelease:
+    createObject2: s32'MistFinerCLv0sousai', 100
+    sprite: s32'jhn403_06', 1
+    sprite: s32'jhn403_07', 1
+    recoveryState:
+    sprite: s32'jhn403_08', 1
+    Unknown448: s32'jhn_mist_lv2modori', 100
+    sprite: s32'jhn403_09', 1
+    createObject2: s32'403Low_bake2', 100
+    sprite: s32'jhn403_10', 2
+    sprite: s32'jhn403_11', 2
+    sprite: s32'jhn403_12', 2
+    sprite: s32'jhn403_13', 1
+    sprite: s32'jhn403_14', 1
+    sprite: s32'jhn403_15', 1
+    sprite: s32'jhn403_16', 3
+    Unknown2161: 100, -106000, 320000
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn403_17', 2
+    sprite: s32'jhn403_18', 2
+    sprite: s32'jhn403_19', 2
+    sprite: s32'jhn403_20', 2
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerCLv2'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        isAirUnblockable: 1
+        guardType: (LOW)
+        groundHitEffect: (AIR_FACE_DOWN)
+        disableHitstop: 1
+        riscMinus: 6
+        Unknown725: 1
+        attackLevel: 4
+        damage: 60
+        tensionGainOnConnect: 80
+        setProration: 90
+        hitAirPushbackX: -3750
+        hitAirPushbackY: 42000
+        untechableTime: 120
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1045: 2, s32'MistHit_Low'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 1
+        Unknown1873: 1
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 95
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        yrcWindowLength: 11
+        endUpon:
+    sprite: s32'jhn403_01', 1
+    playVoice: s16'vxxx203'
+    tensionGain: 40
+    sprite: s32'jhn403_02', 1
+    sprite: s32'jhn403_03', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn403_04', 1
+    sprite: s32'jhn403_05ex', 1
+    createObject2: s32'403Low_bake1', 100
+    createObject2: s32'403Low_kira', 100
+    screenShake: 1, 3
+    grabOrRelease:
+    createObject2: s32'MistFinerCLv2sousai', 100
+    sprite: s32'jhn403_06ex', 1
+    sprite: s32'jhn403_07', 1
+    recoveryState:
+    sprite: s32'jhn403_08', 1
+    sprite: s32'jhn403_09', 1
+    createObject2: s32'403Low_bake2', 100
+    Unknown448: s32'jhn_mist_lv3modori', 100
+    sprite: s32'jhn403_10', 1
+    sprite: s32'jhn403_11', 1
+    sprite: s32'jhn403_12', 1
+    sprite: s32'jhn403_13', 1
+    sprite: s32'jhn403_14', 1
+    sprite: s32'jhn403_15', 1
+    sprite: s32'jhn403_16', 3
+    Unknown2161: 100, -106000, 320000
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn403_17', 2
+    sprite: s32'jhn403_18', 2
+    sprite: s32'jhn403_19', 2
+    sprite: s32'jhn403_20', 2
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'XXMistFinerALv2'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000001000000'
+        isAirUnblockable: 1
+        disableHitstop: 1
+        groundHitEffect: (AIR_FACE_UP)
+        riscMinus: 6
+        Unknown725: 1
+        attackLevel: 4
+        damage: 60
+        tensionGainOnConnect: 90
+        hitAirPushbackX: 35000
+        hitAirPushbackY: 40000
+        untechableTime: 80
+        SFX_0: s32'SE_HITKIRIB'
+        storeValue: (NEXT_ARG_IS_VAR), 45, 0, 0
+        Unknown1873: 1
+        Unknown1045: 2, s32'MistHit_High'
+        upon: (FRAME_STEP)
+            callCmnEfFunc: s32'XXAtkMistGahuCheck'
+            Unknown143: 95
+            endUpon:
+        upon: (HIT)
+            storeValue: (NEXT_ARG_IS_VAR), 5, 0, 0
+            Unknown32: s32'MistKuttsuku'
+            endUpon:
+        Unknown287: 1
+        yrcWindowLength: 10
+        endUpon:
+    sprite: s32'jhn401_00', 1
+    playVoice: s16'vxxx201'
+    tensionGain: 40
+    sprite: s32'jhn401_01', 1
+    sprite: s32'jhn401_02', 1
+    playSFX: s32'GG2_012'
+    sprite: s32'jhn401_03ex', 1
+    createObject2: s32'401High_bake1', 100
+    createObject2: s32'401High_kira', 100
+    screenShake: 1, 3
+    grabOrRelease:
+    createObject2: s32'MistFinerALv2sousai', 100
+    sprite: s32'jhn401_04ex', 1
+    sprite: s32'jhn401_05ex', 1
+    sprite: s32'jhn401_06ex', 1
+    sprite: s32'jhn401_07', 1
+    recoveryState:
+    sprite: s32'jhn401_08', 1
+    sprite: s32'jhn401_09', 1
+    createObject2: s32'401High_bake2', 100
+    Unknown448: s32'jhn_mist_lv3modori', 100
+    sprite: s32'jhn401_10', 1
+    sprite: s32'jhn401_11', 1
+    sprite: s32'jhn401_12', 1
+    sprite: s32'jhn401_13', 2
+    sprite: s32'jhn401_14', 2
+    sprite: s32'jhn401_15', 2
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn401_16', 2
+    Unknown2161: 100, -125000, 295000
+    Unknown448: s32'jhn_noutou01', 130
+    sprite: s32'jhn401_17', 2
+    sprite: s32'jhn401_18', 2
+    sprite: s32'jhn401_19', 2
+    sprite: s32'keep', 2147483647
+    Unknown27: s32'_NEUTRAL'
+    endState:
+
+startState: s32'FB_Jackhound'
+    upon: (IMMEDIATE)
+        consumeTension: 2500
+        reduceTensionGainForTime: 240
+        setForcedProration: 70
+        Unknown1045: 1, s32''
+        Unknown1108: 40
+        Unknown1112: 1
+        disableHitstop: 1
+        Unknown1051: 0
+        hitPushbackX: 8
+        attackLevel: 4
+        damage: 50
+        isAirUnblockable: 1
+        groundHitEffect: (STAGGER)
+        airHitEffect: (AIR_LAUNCH)
+        staggerDuration: 92
+        hitAirPushbackX: 5000
+        hitAirPushbackY: 40000
+        untechableTime: 80
+        SFX_0: s32'SE_HITKIRIB'
+        Unknown1939: 1
+        upon: 50
+            Unknown2199: 1
+            Unknown2286: 1
+            Unknown2044: '0x48B1FFFFF142010022AF010060090000040B0000000000005A0000000F000000140000000F00000001000000'
+            Unknown2161: 100, -10000, 230000
+            Unknown448: s32'cmn_kakusei_hatudo', 130
+            endUpon:
+        upon: (HIT)
+            callCmnEfFunc: s32'Treasure1up'
+            Unknown14: s32'hit'
+            endUpon:
+        endUpon:
+    playSFX: s32'SE_KAKUSEI'
+    characterEffectOverlay: -1
+    sprite: s32'jhn431_00', 3
+    Unknown176: 1
+    fadeColorRed: -30
+    fadeColorGreen: -30
+    fadeColorBlue: -30
+    upon: (FRAME_STEP)
+        Unknown23: 3
+        Unknown14: s32'Run'
+        endIf:
+    sprite: s32'jhn431_03', 4
+    createObject2: s32'Treasure_charge', 100
+    sprite: s32'jhn431_04', 4
+    sprite: s32'jhn431_05', 4
+    Unknown3:
+    setMarker: s32'Run'
+    sprite: s32'jhn431_06', 2
+    sprite: s32'jhn431_07', 2
+    createObject2: s32'Treasure_dash', 100
+    setStrikeInvul: 1
+    setThrowInvul: 1
+    physicsXImpulse: 80000
+    setNoCollision: 0
+    if: (NEXT_ARG_IS_VAR), 161
+        setThrowInvul: 0
+        setStrikeInvul: 0
+        endIf:
+    sprite: s32'jhn431_08', 2
+    upon: (FRAME_STEP)
+        ifOperation: (IS_LESSER_OR_EQUAL), (NEXT_ARG_IS_VAR), 104, 0, -410000
+            Unknown23: 3
+            physicsXImpulse: 1000
+            Unknown2197: 90
+            endIf:
+        endUpon:
+    sprite: s32'jhn431_07', 2
+    sprite: s32'jhn431_08', 2
+    setMarker: s32'Attack'
+    sprite: s32'jhn431_09', 2
+    sprite: s32'jhn431_10', 2
+    ifOperation: (IS_LESSER_OR_EQUAL), (NEXT_ARG_IS_VAR), 104, 0, 140000
+        createObject2: s32'431bake', 100
+        hit:
+        endIf:
+    sprite: s32'jhn431_11', 2
+    recoveryState:
+    setNoCollision: 1
+    setStrikeInvul: 0
+    setThrowInvul: 0
+    Unknown2199: 0
+    Unknown23: 3
+    physicsXImpulse: 1000
+    Unknown2197: 90
+    sprite: s32'jhn432_00', 2
+    playVoice: s16'vxxx213'
+    playSFX: s32'SE_SWINGG'
+    sprite: s32'jhn432_01', 2
+    Unknown2143: 6, 100
+    sprite: s32'jhn432_02', 4
+    createObject2: s32'Treasure_fail', 100
+    sprite: s32'jhn432_03', 3
+    sprite: s32'jhn432_04', 3
+    sprite: s32'jhn432_05', 2
+    sprite: s32'jhn431_19', 2
+    sprite: s32'jhn431_21', 3
+    Unknown448: s32'jhn_noutou01', 130
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn431_22', 4
+    sprite: s32'jhn431_23', 3
+    sprite: s32'jhn431_24', 3
+    sprite: s32'jhn431_25', 3
+    Unknown3:
+    Unknown18:
+    setMarker: s32'hit'
+    sprite: s32'jhn431_10', 3
+    playVoice: s16'vxxx212'
+    createObject2: s32'Treasure_hit', 132
+    Unknown2161: 100, 0, 205000
+    createObject2: s32'Jackhound_Treasure', 130
+    Unknown2202: 0
+    sprite: s32'jhn431_11', 3
+    recoveryState:
+    sprite: s32'jhn431_12', 5
+    createObject2: s32'Treasure_zanzo', 100
+    setStrikeInvul: 0
+    setThrowInvul: 0
+    setNoCollision: 1
+    Unknown2143: 6, 100
+    sprite: s32'jhn431_13', 2
+    Unknown2202: 1
+    sprite: s32'jhn431_15', 2
+    playSFX: s32'SE_SAYA2'
+    Unknown2199: 0
+    sprite: s32'jhn431_24', 3
+    sprite: s32'jhn431_25', 2
+    endState:
+
+startState: s32'FB_Killerjoker'
+    upon: (IMMEDIATE)
+        Unknown708: '0x1200000003000000'
+        consumeTension: 2500
+        setJumpCancelable: 1
+        guardType: (HIGH)
+        groundHitEffect: (AIR_FACE_UP)
+        attackLevel: 2
+        damage: 25
+        setForcedProration: 80
+        hitAirPushbackX: -6500
+        hitAirPushbackY: 34000
+        untechableTime: 60
+        endUpon:
+    upon: (HIT)
+        Unknown1788:
+        Unknown1790:
+        Unknown448: s32'cmn_alram_guardfuno', 103
+        Unknown27: s32'_NEUTRAL'
+        endUpon:
+    sprite: s32'jhn253_00', 1
+    characterEffectOverlay: -1
+    playSFX: s32'SE_KAKUSEI'
+    sprite: s32'jhn253_01', 1
+    sprite: s32'jhn253_02', 1
+    sprite: s32'jhn253_03', 1
+    fadeColorBlue: -35
+    fadeColorGreen: -35
+    fadeColorRed: -35
+    Unknown621: '0x02000000FFFFFFFF'
+    sprite: s32'jhn253_04', 1
+    sprite: s32'jhn253_05', 2
+    playSFX: s32'SE_SWINGH'
+    physicsYImpulse: 12000
+    sprite: s32'jhn253_06', 2
+    playSFX: s32'SE_SWINGG'
+    physicsYImpulse: 22500
+    physicsXImpulse: 500
+    setGravity: 1500
+    sprite: s32'jhn253_07', 3
+    createObject2: s32'253bake1', 100
+    hit:
+    sprite: s32'jhn253_08', 3
+    sprite: s32'jhn253_09', 3
+    createObject2: s32'253bake2', 100
+    sprite: s32'jhn253_10', 3
+    sprite: s32'jhn253_11', 3
+    createObject2: s32'253bake3', 100
+    sprite: s32'jhn253_12', 4
+    playSFX: s32'SE_SAYA2'
+    sprite: s32'jhn253_14', 3
+    Unknown2161: 100, -80000, 310000
+    createObject2: s32'Noutou', 130
+    Unknown27: s32'_NEUTRAL'
     endState:
