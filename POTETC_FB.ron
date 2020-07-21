@@ -1,0 +1,646 @@
+startState: s32'dmy'
+    sprite: s32'null', 1
+    endState:
+
+startState: s32'yakkyou'
+    upon: (IMMEDIATE)
+        Unknown450: s32'pot_yakkyo'
+        Unknown117: '0xA8E4FFFFBAC1FFFF'
+        Unknown118: '0x04290000F24B0000'
+        setGravity: 875
+        Unknown166: 45000
+        setThrowRange: 0
+        Unknown35: 2, s32'landing'
+        endUpon:
+    sprite: s32'null', 2147483647
+    setMarker: s32'landing'
+    sprite: s32'null', 2
+    upon: 2
+        Unknown19: 23
+        endUpon:
+    playCharacterSFX: s32'6'
+    Unknown111: 50
+    Unknown116: -50
+    Unknown338: 255
+    sprite: s32'null', 2
+    Unknown338: 0
+    sprite: s32'null', 2
+    Unknown338: 255
+    sprite: s32'null', 2
+    Unknown338: 0
+    sprite: s32'null', 2
+    Unknown338: 255
+    sprite: s32'null', 2
+    Unknown338: 0
+    sprite: s32'null', 2
+    Unknown338: 255
+    sprite: s32'null', 2
+    Unknown338: 0
+    sprite: s32'null', 2
+    Unknown338: 255
+    sprite: s32'null', 2
+    Unknown338: 0
+    sprite: s32'null', 2
+    Unknown338: 255
+    endState:
+
+startState: s32'FDB_obj'
+    upon: (IMMEDIATE)
+        Unknown244:
+        groundHitEffect: (STAGGER)
+        attackLevel: 2
+        Unknown1028: 2
+        damage: 16
+        riscPlus: 10
+        untechableTime: 60
+        Unknown289: 150
+        Unknown58: 1
+        upon: (HIT_OR_GUARD)
+            Unknown19: 23
+            endUpon:
+        endUpon:
+    setMarker: s32'loop'
+    sprite: s32'poe8_00', 7
+    physicsXImpulse: 8750
+    Unknown2159: 2
+    hit:
+    createObject2: s32'FDB_eff', 100
+    Unknown3:
+    goToMarker: s32'loop'
+    endState:
+
+startState: s32'FDB_eff'
+    sprite: s32'null', 30
+    Unknown450: s32'pot_fdb_counter'
+    endState:
+
+startState: s32'Bomb'
+    upon: (IMMEDIATE)
+        Unknown244:
+        groundHitEffect: (AIR_FACE_UP)
+        attackLevel: 2
+        Unknown1028: 2
+        damage: 48
+        riscPlus: 10
+        untechableTime: 38
+        hitFlameEffect: 1
+        hitAirPushbackX: 0
+        hitAirPushbackY: 40000
+        groundHitEffect: (AIR_LAUNCH)
+        airCounterHitEffect: (AIR_LAUNCH)
+        tensionGainOnConnect: 50
+        setProration: 80
+        Unknown458: 3
+        Unknown454: 3
+        upon: (AFTER_EXIT)
+            Unknown454: 0
+            endUpon:
+        Unknown457: 3
+        endUpon:
+    sprite: s32'null', 15
+    Unknown450: s32'pot_floorbomb'
+    setObjectSize: 600
+    sprite: s32'null', 6
+    Unknown457: 0
+    sprite: s32'poeb_00', 5
+    Unknown458: 0
+    Unknown454: 0
+    screenShake: 1, 2
+    setObjectSize: 1200
+    hit:
+    sprite: s32'poeb_01', 5
+    sprite: s32'poeb_02', 5
+    sprite: s32'null', 45
+    endState:
+
+startState: s32'202Bake'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown456: 2
+        Unknown450: s32'pot_202_bake'
+        endUpon:
+    sprite: s32'null', 10
+    endState:
+
+startState: s32'232Bake'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown456: 2
+        Unknown450: s32'pot_232_bake'
+        endUpon:
+    sprite: s32'null', 10
+    endState:
+
+startState: s32'252Bake'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown456: 2
+        Unknown450: s32'pot_252_bake'
+        endUpon:
+    sprite: s32'null', 10
+    endState:
+
+startState: s32'320Bake'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown456: 2
+        Unknown450: s32'pot_320_bake'
+        endUpon:
+    sprite: s32'null', 10
+    endState:
+
+startState: s32'403Bake'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown456: 2
+        Unknown450: s32'pot_403_bake'
+        endUpon:
+    sprite: s32'null', 3
+    endState:
+
+startState: s32'Buster_handfire'
+    upon: (IMMEDIATE)
+        Unknown454: 2
+        endUpon:
+    sprite: s32'null', 10
+    Unknown1769: 1
+    Unknown450: s32'pot_buster_handfire'
+    sprite: s32'null', 140
+    Unknown1769: 0
+    endState:
+
+startState: s32'HBuster_handfire'
+    upon: (IMMEDIATE)
+        Unknown454: 2
+        endUpon:
+    sprite: s32'null', 10
+    Unknown1769: 1
+    Unknown450: s32'pot_hbuster_handfire'
+    sprite: s32'null', 140
+    Unknown1769: 0
+    endState:
+
+startState: s32'Buster_Cam'
+    upon: (IMMEDIATE)
+        Unknown2050:
+        endUpon:
+    sprite: s32'null', 18
+    Unknown2047: '0x1700000058D0FFFF380E0A00E0F9F3FFD4FEFFFF00000000000000003600000000000000320000000A000000000000000000000000000000'
+    sprite: s32'null', 45
+    Unknown2045: s32'RandomShake', 2000, 0, 30, 10
+    endState:
+
+startState: s32'GiganObj'
+    upon: (IMMEDIATE)
+        Unknown245:
+        groundHitEffect: (STAGGER)
+        staggerDuration: 70
+        attackLevel: 4
+        Unknown1028: 2
+        damage: 30
+        riscPlus: 20
+        riscMinus: 10
+        untechableTime: 75
+        hitAirPushbackX: 2000
+        hitAirPushbackY: 6000
+        hitGravity: 400
+        stunValue: 135
+        Unknown727: 1
+        if: (NEXT_ARG_IS_VAR), 126
+            guardType: (NONE)
+            endIf:
+        Unknown450: s32'pot_gaiganter_atk_start'
+        upon: (HIT_OR_GUARD)
+            Unknown23: 23
+            Unknown14: s32'End'
+            endUpon:
+        upon: (ON_HIT_OR_BLOCK)
+            Unknown23: 8
+            Unknown14: s32'End'
+            endUpon:
+        endUpon:
+    sprite: s32'poe4_06', 10
+    sprite: s32'poe4_06', 12
+    hit:
+    physicsXImpulse: 875
+    Unknown450: s32'pot_gaiganter_atk'
+    sprite: s32'poe4_06', 12
+    physicsXImpulse: 1750
+    sprite: s32'poe4_06', 12
+    physicsXImpulse: 2625
+    sprite: s32'poe4_06', 12
+    physicsXImpulse: 3500
+    sprite: s32'poe4_06', 12
+    physicsXImpulse: 4375
+    setMarker: s32'End'
+    sprite: s32'null', 16
+    Unknown450: s32'pot_gaiganter_atk_end'
+    recoveryState:
+    endState: 
+
+startState: s32'GiganObj_FB'
+    upon: (IMMEDIATE)
+        Unknown245:
+        groundHitEffect: (AIR_FACE_UP)
+        attackLevel: 4
+        Unknown1028: 2
+        damage: 30
+        riscMinus: 10
+        untechableTime: 75
+        hitAirPushbackX: 2000
+        hitAirPushbackY: 6000
+        Unknown727: 1
+        if: (NEXT_ARG_IS_VAR), 126
+            guardType: (NONE)
+            endIf:
+        Unknown450: s32'pot_gaiganter_atk_start'
+        upon: (HIT_OR_GUARD)
+            Unknown23: 23
+            Unknown14: s32'End'
+            endUpon:
+        upon: (ON_HIT_OR_BLOCK)
+            Unknown23: 8
+            Unknown14: s32'End'
+            endUpon:
+        endUpon:
+    sprite: s32'poe4_06', 3
+    sprite: s32'poe4_06', 4
+    hit:
+    physicsXImpulse: 875
+    Unknown450: s32'pot_gaiganter_atk'
+    sprite: s32'poe4_06', 12
+    physicsXImpulse: 2750
+    sprite: s32'poe4_06', 12
+    physicsXImpulse: 1325
+    sprite: s32'poe4_06', 120
+
+    setMarker: s32'End'
+    sprite: s32'null', 16
+    Unknown450: s32'pot_gaiganter_atk_end'
+    recoveryState:
+    endState:
+
+startState: s32'Buster_floor'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        endUpon:
+    sprite: s32'null', 10
+    Unknown1769: 1
+    Unknown450: s32'pot_buster_floor'
+    sprite: s32'null', 80
+    Unknown1769: 0
+    endState:
+
+startState: s32'Gigantic_headatk'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown450: s32'pot_gaigantic_headatk'
+        endUpon:
+    sprite: s32'null', 150
+    endState:
+
+startState: s32'Gigantic_Bake'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown456: 2
+        Unknown450: s32'pot_gaigantic_bake'
+        endUpon:
+    sprite: s32'null', 20
+    endState:
+
+startState: s32'Hbuster_floor'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        endUpon:
+    sprite: s32'null', 10
+    Unknown1769: 1
+    Unknown450: s32'pot_hbuster_floor'
+    sprite: s32'null', 80
+    Unknown1769: 0
+    endState:
+
+startState: s32'Neoblitz_atk'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown454: 2
+        Unknown466: 2
+        Unknown450: s32'pot_neoblitz'
+        endUpon:
+    sprite: s32'null', 80
+    endState:
+
+startState: s32'BG_tojo'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_tojo_bg'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'BG_tojo_smoke'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_tojo_landsmoke'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'BG_scrbase'
+    upon: (IMMEDIATE)
+        Unknown450: s32'pot_scrbase'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'Pot_win_screen'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_win_screen'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'BG_ichigeki1'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_ichigeki_bg1'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'BG_ichigeki2'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_ichigeki_bg2'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'BG_ichigeki3'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_ichigeki_bg3'
+        endUpon:
+    sprite: s32'null', 2147483647
+    endState:
+
+startState: s32'pot_ichgeki_screen'
+    upon: (IMMEDIATE)
+        Unknown457: 2
+        Unknown450: s32'pot_ichgeki_screen'
+        endUpon:
+    sprite: s32'null', 800
+    endState:
+
+startState: s32'SlideHead_Obj'
+    upon: (IMMEDIATE)
+        Unknown244:
+        Unknown454: 2
+        Unknown456: 2
+        Unknown457: 2
+        groundHitEffect: (AIR_FACE_DOWN)
+        guardType: (NONE)
+        attackLevel: 4
+        damage: 0
+        tensionGainOnConnect: 30
+        Unknown870: 61
+        hitPushbackX: 0
+        disableHitstop: 1
+        Unknown1142: 1
+        Unknown1061: 1
+        endUpon:
+    sprite: s32'pot405_05', 1
+    hit:
+    endState:
+
+startState: s32'FinishCamera_PBuster'
+    upon: (IMMEDIATE)
+        Unknown294: 1
+        Unknown1769: 1
+        Unknown2065:
+        Unknown2050:
+        endUpon:
+    sprite: s32'null', 2
+    Unknown2047: '0x0D000000AFEDFFFFA5A0030068270200E70300003E0100005E00000055000000000000000A00000000000000000000000200000002000000'
+    sprite: s32'null', 170
+    Unknown2047: '0x0D000000A1EDFFFF0A9803005B330100730A00000F0100005F0000005A000000AA0000000000000014000000000000000200000002000000'
+    Unknown2045: s32'YokoYure', 2500, 1, 30, 85
+    endState:
+
+startState: s32'FinishCamera_HeavenlyPBuster'
+    upon: (IMMEDIATE)
+        Unknown294: 1
+        Unknown1769: 1
+        Unknown2065:
+        Unknown2050:
+        endUpon:
+    sprite: s32'null', 10
+    Unknown2047: '0x0D000000AB98FFFF83210200D40301008F1200009E09000000000000640000000A0000001E0000000F000000000000000200000002000000'
+    sprite: s32'null', 170
+    Unknown2047: '0x0D00000005A7FFFFCBE50100E52101008F1200009E0900000000000064000000AA0000000000000014000000000000000200000002000000'
+    endState:
+
+startState: s32'ACEvtPOT_7A'
+    upon: (IMMEDIATE)
+        Unknown2075: 1
+        Unknown2114: '0x000000FF000000FF01000000'
+        Unknown2107: '0x4576656E74504F543037415F303100000000000000000000000000000000000000000000'
+        endUpon:
+    sprite: s32'null', 1
+    Unknown2123: s32'BGM_HEIJI2'
+    Unknown2123: s32'BGM_HEIJI1'
+    Unknown2122:
+    sprite: s32'null', 1
+    Unknown2120: '0x4845494A4932000000000000000000000000000000000000000000000000000000000000'
+    Unknown2115: 60, 0
+    sprite: s32'null', 90
+    Unknown2113: '0x4143325F504F545F4237415F3030315F3000000000000000000000000000000080020000680100003C000000B40000003C000000'
+    sprite: s32'null', 140
+    Unknown2114: '0x000000FF000000003C000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F30303200000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F303033000000000000000000000000000000000001000000'
+    sprite: s32'null', 210
+    Unknown2107: '0x4576656E74504F543037415F303200000000000000000000000000000000000000000000'
+    Unknown2107: '0x4576656E74504F543037415F303165000000000000000000000000000000000001000000'
+    Unknown2106: '0x4143325F504F545F4237415F30303400000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2107: '0x4576656E74504F543037415F303265000000000000000000000000000000000001000000'
+    Unknown2106: '0x4143325F504F545F4237415F30303500000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F303036000000000000000000000000000000000001000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F30303700000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2107: '0x4576656E74504F543037415F303365000000000000000000000000000000000001000000'
+    Unknown2106: '0x4143325F504F545F4237415F303038000000000000000000000000000000000001000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F30303900000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2107: '0x4576656E74504F543037415F303465000000000000000000000000000000000001000000'
+    Unknown2106: '0x4143325F504F545F4237415F303130000000000000000000000000000000000001000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F30313100000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237415F30313200000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2107: '0x4576656E74504F543037415F303300000000000000000000000000000000000000000000'
+    Unknown2106: '0x4143325F504F545F4237415F30313300000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2107: '0x4576656E74504F543037415F303400000000000000000000000000000000000000000000'
+    Unknown2106: '0x4143325F504F545F4237415F30313400000000000000000000000000000000001E000000'
+    sprite: s32'null', 10
+    sprite: s32'null', 10
+    Unknown2114: '0x00000000000000FF0A000000'
+    sprite: s32'null', 1
+    Unknown2108:
+    endState:
+
+startState: s32'ACEvtPOT_7B'
+    upon: (IMMEDIATE)
+        Unknown2114: '0x000000FF000000001E000000'
+        Unknown2107: '0x4576656E745374616E640000000000000000000000000000000000000000000000000000'
+        Unknown2107: '0x4576656E74504F543037425F303165000000000000000000000000000000000001000000'
+        endUpon:
+    sprite: s32'null', 1
+    Unknown2120: '0x4845494A4931000000000000000000000000000000000000000000000000000000000000'
+    Unknown2115: 60, 0
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237425F30303100000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4237425F30303200000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2107: '0x4576656E74504F543037425F303100000000000000000000000000000000000000000000'
+    Unknown2106: '0x4143325F504F545F4237425F30303300000000000000000000000000000000001E000000'
+    sprite: s32'null', 10
+    sprite: s32'null', 10
+    Unknown2114: '0x00000000000000FF0A000000'
+    sprite: s32'null', 1
+    Unknown2108:
+    endState:
+
+startState: s32'ACEvtPOT_8A'
+    upon: (IMMEDIATE)
+        Unknown2075: 1
+        Unknown2114: '0x000000FF000000FF01000000'
+        Unknown2107: '0x4576656E74504F543038415F303100000000000000000000000000000000000001000000'
+        endUpon:
+    sprite: s32'null', 1
+    Unknown2123: s32'BGM_SeriousTalk'
+    Unknown2123: s32'BGM_Politics'
+    Unknown2122:
+    sprite: s32'null', 1
+    Unknown2120: '0x536572696F757354616C6B00000000000000000000000000000000000000000000000000'
+    Unknown2115: 40, 0
+    sprite: s32'null', 90
+    Unknown2113: '0x4143325F504F545F4238415F3030315F3000000000000000000000000000000080020000680100003C000000B40000003C000000'
+    sprite: s32'null', 140
+    Unknown2114: '0x000000FF000000003C000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303200000000000000000000000000000000001E000000'
+    sprite: s32'null', 220
+    Unknown2107: '0x4576656E74504F543038415F303100000000000000000000000000000000000000000000'
+    Unknown2106: '0x4143325F504F545F4238415F30303300000000000000000000000000000000001E000000'
+    sprite: s32'null', 20
+    Unknown2107: '0x4576656E74504F543038415F303200000000000000000000000000000000000001000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303400000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303500000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303600000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303700000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303800000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30303900000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30313000000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30313100000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30313200000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2115: 0, 120
+    Unknown2106: '0x4143325F504F545F4238415F30313300000000000000000000000000000000001E000000'
+    sprite: s32'null', 70
+    Unknown2120: '0x6D61696E00000000000000000000000000000000000000000000000000000000F0000000'
+    Unknown2115: 40, 0
+    Unknown2107: '0x4576656E74504F543038415F303200000000000000000000000000000000000000000000'
+    upon: (FRAME_STEP)
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 105, 0, 20
+            Unknown2107: '0x4576656E74504F543038415F303300000000000000000000000000000000000001000000'
+            endIf:
+        endUpon:
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30313400000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30313500000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238415F30313600000000000000000000000000000000001E000000'
+    upon: (FRAME_STEP)
+        ifOperation: (IS_EQUAL), (NEXT_ARG_IS_VAR), 105, 0, 340
+            Unknown2107: '0x4576656E74504F543038415F303300000000000000000000000000000000000000000000'
+            endIf:
+        endUpon:
+    sprite: s32'null', 10
+    sprite: s32'null', 10
+    Unknown2114: '0x00000000000000FF0A000000'
+    sprite: s32'null', 1
+    Unknown2108:
+    endState:
+
+startState: s32'ACEvtPOT_8B'
+    upon: (IMMEDIATE)
+        Unknown2114: '0x000000FF000000001E000000'
+        Unknown2107: '0x4576656E745374616E640000000000000000000000000000000000000000000000000000'
+        Unknown2107: '0x4576656E74504F543038425F303100000000000000000000000000000000000001000000'
+        Unknown2121: 1
+        Unknown94: -100000
+        Unknown40:
+        endUpon:
+    sprite: s32'null', 1
+    Unknown2120: '0x506F6C697469637300000000000000000000000000000000000000000000000000000000'
+    Unknown2115: 40, 0
+    sprite: s32'null', 120
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303100000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303200000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303300000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303400000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303500000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303600000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303700000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303800000000000000000000000000000000001E000000'
+    sprite: s32'null', 2147483647
+    Unknown2106: '0x4143325F504F545F4238425F30303900000000000000000000000000000000001E000000'
+    sprite: s32'null', 10
+    sprite: s32'null', 10
+    Unknown2114: '0x00000000000000FF0A000000'
+    sprite: s32'null', 1
+    Unknown2108:
+    endState:
